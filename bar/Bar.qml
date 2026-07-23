@@ -13,26 +13,26 @@ Scope {
                 id: bar
                 required property var modelData
                 screen: modelData
-
                 anchors {
                     top: true
                     left: true
                     right: true
                 }
-                implicitHeight: 24
+                margins {
+                    // top: 4.0
+                    left: 4.0
+                    right: 4.0
+                }
+                implicitHeight: 27
                 height: implicitHeight
                 color: "yellow"
 
                 Clock {
                     anchors.centerIn: parent
-                    anchors.verticalCenter: parent.verticalCenter
                 }
 
                 QuickInfo {
-                    anchors {
-                        right: parent.right
-                        rightMargin: 12
-                    }
+                    anchors.right: parent.right
                 }
             }
         }
