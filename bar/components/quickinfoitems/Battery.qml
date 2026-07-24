@@ -1,6 +1,7 @@
 import Quickshell.Services.UPower
 import QtQuick
 
+import qs.assets.icons
 import qs.animations
 
 QuickInfoItem {
@@ -39,7 +40,7 @@ QuickInfoItem {
             }
         }
 
-        Rectangle{
+        Rectangle {
             id: btIconContainer
             width: discharging ? 0 : batteryIcon.implicitWidth
             height: batteryIcon.height
@@ -49,9 +50,7 @@ QuickInfoItem {
             anchors.verticalCenterOffset: 2.5
             Image {
                 id: batteryIcon
-                source: Qt.resolvedUrl(
-                    "../../../assets/icons/charging.svg"
-                )
+                source: Icons.charging
                 sourceSize.height: 12
                 opacity: btIconContainer.width > 0 ? 1 : 0
             }
