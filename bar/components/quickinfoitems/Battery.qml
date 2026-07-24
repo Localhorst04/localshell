@@ -16,12 +16,12 @@ QuickInfoItem {
         anchors.centerIn: parent
         layoutDirection: Qt.RightToLeft
         height: implicitHeight
-        spacing: -3.0
+        spacing: -2.0
 
-        rightPadding: 5.0
-        leftPadding: 4.0
+        leftPadding: discharging ? 1 : -1.0
+        rightPadding: 1.0
 
-        Rectangle{
+        Rectangle {
             width: label.implicitWidth
             height: label.height
             anchors.verticalCenter: parent.verticalCenter

@@ -2,6 +2,7 @@ import QtQuick
 import QtQuick.Layouts
 import Quickshell.Widgets
 
+import qs.assets.icons
 import qs.bar.components.quickinfoitems
 import qs.animations
 
@@ -12,14 +13,7 @@ Row {
     height: implicitHeight
     spacing: 4.0
 
-    leftPadding: 6.0
-    rightPadding: 6.0
-    topPadding: 3.0
-    bottomPadding: 3.0
-
     readonly property color bgColor: "transparent"
-    readonly property string btConnectedPath: "../../../assets/icons/bluetooth-connected.svg"
-    readonly property string btIconPath: "../../../assets/icons/bluetooth.svg"
 
     Rectangle {
         width: btIcon.implicitWidth
@@ -31,7 +25,7 @@ Row {
             id: btIcon
 
             source: Qt.resolvedUrl(
-                anyConnected ? btConnectedPath : btIconPath
+                anyConnected ? Icons.btconnected : Icons.bluetooth
             )
             sourceSize.height: 14
             opacity: btRow.width > 0 ? 1 : 0
