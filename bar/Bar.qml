@@ -19,13 +19,13 @@ Scope {
                     right: true
                 }
                 margins {
-                    // top: 4.0
+                    top: 4.0
                     left: 4.0
                     right: 4.0
                 }
-                implicitHeight: 27
+                implicitHeight: 28
                 height: implicitHeight
-                color: "yellow"
+                color: "transparent"
 
                 Clock {
                     anchors.centerIn: parent
