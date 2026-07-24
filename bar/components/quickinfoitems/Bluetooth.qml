@@ -6,11 +6,12 @@ import Quickshell.Bluetooth
 import Quickshell.Widgets
 
 import qs.bar.components.quickinfoitems
+import qs.bar.components.quickinfoitems.bluetooth
 import qs.animations
 
 QuickInfoItem {
     id: bluetooth
-    width: batteryBar.width
+    implicitWidth: batteryBar.width
     gradient: batteryAvailable && !batteryCirtical ? batteryGradient : null
     color: !batteryAvailable ? "transparent" : batteryLow ? colorEmpty : colorFull
 

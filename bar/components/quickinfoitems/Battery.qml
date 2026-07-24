@@ -6,7 +6,7 @@ import qs.animations
 
 QuickInfoItem {
     id: battery
-    width: batteryRow.width
+    implicitWidth: batteryRow.width
 
     property var device: UPower.displayDevice
     property bool discharging: device.state === UPowerDeviceState.Discharging

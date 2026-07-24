@@ -1,8 +1,10 @@
 import QtQuick
 
 Rectangle {
-    readonly property real margin: 8.0
-    height: parent.height - margin
+    property real verticalMargin: 10.0
+    property real horizontalPadding: 8.0
+    height: parent.height - verticalMargin
+    width: implicitWidth + horizontalPadding
 
     radius: height / 2.8
     anchors.verticalCenter: parent.verticalCenter
