@@ -21,10 +21,11 @@ Row {
     readonly property string btConnectedPath: "../../../assets/icons/bluetooth-connected.svg"
     readonly property string btIconPath: "../../../assets/icons/bluetooth.svg"
 
-    Rectangle {   
+    Rectangle {
         width: btIcon.implicitWidth
         height: btIcon.implicitHeight
         color: bgColor
+        anchors.verticalCenter: parent.verticalCenter
 
         Image {
             id: btIcon
@@ -42,6 +43,8 @@ Row {
         id: labelcontainer
         width:  anyConnected &&  connectedDevice.batteryAvailable ? label.implicitWidth : 0
         height: label.height
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.verticalCenterOffset: 1.0
 
         color: bgColor
         Text {

@@ -10,18 +10,19 @@ Rectangle {
     width: quickInfo.width
     radius: height / 2.8
 
-    color: "gray"
+    border.color: "black"
+    border.width: 1.5
 
-    ExpandCollapse on implicitWidth {}
+    color: "gray"
 
     Row {
         id: quickInfo
         height: parent.height
         layoutDirection: Qt.RightToLeft
-        spacing: 4.0
+        spacing: 2.0
 
-        rightPadding: 2.5
-        leftPadding: 2.5
+        rightPadding: 4.0
+        leftPadding: 4.0
 
         Battery {}
         Bluetooth {}
