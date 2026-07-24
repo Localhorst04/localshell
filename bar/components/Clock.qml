@@ -44,7 +44,7 @@ Item {
 
         color: "gray"
         border.color: "black"
-        border.width: 1.5
+        border.width: 2.5
 
         ClockExpand on width {}
         clip: true
@@ -53,9 +53,10 @@ Item {
             id: label
             anchors.horizontalCenter: parent.horizontalCenter
             anchors.verticalCenter: parent.verticalCenter
+            anchors.verticalCenterOffset: 1.0
 
             font {
-                pixelSize: 17
+                pixelSize: 18
                 family: kameronReg.name
                 bold: true
                 italic: true
