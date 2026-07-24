@@ -8,8 +8,12 @@ import Quickshell.Widgets
 import qs.bar.components.quickinfoitems
 import qs.animations
 
-Rectangle {
+QuickInfoItem {
     id: bluetooth
+    width: batteryBar.width
+    gradient: batteryAvailable && !batteryCirtical ? batteryGradient : null
+    color: !batteryAvailable ? "transparent" : batteryLow ? colorEmpty : colorFull
+
     property var adapter: Bluetooth.defaultAdapter
     property bool anyConnected: adapter.devices.values.some(d => d.state === BluetoothDeviceState.Connected)
     property var connectedDevice: adapter.devices.values.find(d => d.state === BluetoothDeviceState.Connected)
@@ -28,16 +32,6 @@ Rectangle {
     readonly property color colorFull: "#4caf50"
     readonly property color colorLow: "#ff9800"
     readonly property color colorEmpty: "#f44336"
-
-    width: batteryBar.width
-    height: batteryBar.height
-    anchors.verticalCenter: parent.verticalCenter
-    radius: height / 2.8
-    border.color: black
-    border.width: anyConnected ? 1.2 : 0
-
-    gradient: batteryAvailable && !batteryCirtical ? batteryGradient : null
-    color: !batteryAvailable ? "transparent" : batteryLow ? colorEmpty : colorFull
 
     Gradient {
         id: batteryGradient
