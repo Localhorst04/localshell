@@ -3,6 +3,7 @@ import QtQuick.Layouts
 import Quickshell.Widgets
 
 import qs.bar.components.quickinfoitems
+import qs.bar.components.quickinfoitems.bluetooth
 import qs.animations
 
 Rectangle {
